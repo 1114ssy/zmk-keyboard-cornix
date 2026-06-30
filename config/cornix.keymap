@@ -167,7 +167,7 @@
             #binding-cells = <0>;
             bindings = <&lt 4 RIGHT_GUI>, <&mo 5>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -257,18 +257,18 @@
 
         layer_3 {
             bindings = <
-&kp TAB  &mkp MB5  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &mkp MB4  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans    &trans          &trans          &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &mkp MB5  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP                    &trans  &trans  &trans  &trans  &trans  &kp DELETE
+&trans   &mkp MB4  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN                  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP
+&trans   &trans    &trans          &trans          &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN
 &trans   &trans    &trans          &trans          &trans           &trans                         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp INSERT
+&trans  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &kp HOME
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans        &kp END
 &trans  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
