@@ -160,31 +160,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>;
         };
-
-        fn3_td: fn3_td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FN3_TD";
-            #binding-cells = <0>;
-            bindings = <&mo 4>, <&mo 5>;
-
-            tapping-term-ms = <200>;
-        };
-
-        fn3_lt: fn3_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FN3_LT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <6 4>;
+            if-layers = <6 3>;
             then-layer = <6>;
         };
     };
@@ -235,10 +217,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&grave_esc        &kp Q         &kp W  &kp E    &kp R  &kp T                           &kp Y        &kp U            &kp I      &kp O     &kp P          &kp BACKSPACE
-&lcmd             &kp A         &kp S  &kp D    &kp F  &kp G                           &kp H        &kp J            &kp K      &kp L     &kp BACKSLASH  &kp ENTER
-&kp LEFT_SHIFT    &kp Z         &kp X  &kp C    &kp V  &kp B        &kp C_MUTE  &none  &kp N        &kp M            &kp COMMA  &kp DOT   &up_question   &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &fn3_td  &mo 3  &lt 2 SPACE                     &lt 2 SPACE  &lt 3 RIGHT_GUI  &fn3_td    &kp LEFT  &kp DOWN       &kp RIGHT
+&grave_esc        &kp Q         &kp W  &kp E  &kp R  &kp T                           &kp Y        &kp U  &kp I            &kp O     &kp P         &kp BACKSPACE
+&lcmd             &kp A         &kp S  &kp D  &kp F  &kp G                           &kp H        &kp J  &kp K            &kp L     &kp SLASH     &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X  &kp C  &kp V  &kp B        &kp C_MUTE  &none  &kp N        &kp M  &kp COMMA        &kp DOT   &kp UP_ARROW  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &mo 4  &mo 3  &lt 2 SPACE                     &lt 2 SPACE  &mo 3  &lt 4 RIGHT_GUI  &kp LEFT  &kp DOWN      &kp RIGHT
             >;
 
             sensor-bindings =
@@ -264,21 +246,21 @@
             >;
         };
 
+        layer_4 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6     &kp NUMBER_7   &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0          &trans
+&trans  &trans        &trans        &trans        &trans        &trans                        &kp MINUS        &kp EQUAL      &kp SEMICOLON     &kp SEMICOLON      &kp NON_US_BACKSLASH  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp KP_ASTERISK  &kp KP_DIVIDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                &trans
+&trans  &trans        &trans        &trans        &trans        &trans                        &trans           &trans         &trans            &trans             &trans                &trans
+            >;
+        };
+
         layer_3 {
             bindings = <
 &kp TAB  &mkp MB5  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP                    &trans  &trans  &trans  &trans  &trans  &kp DELETE
 &trans   &mkp MB4  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN                  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP
 &trans   &trans    &trans          &trans          &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN
 &trans   &trans    &trans          &trans          &trans           &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6     &kp NUMBER_7   &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0  &kp INSERT
-&trans  &trans        &trans        &trans        &trans        &trans                        &kp KP_MINUS     &kp KP_PLUS    &kp KP_EQUAL      &kp SEMICOLON      &kp SQT       &kp HOME
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp KP_ASTERISK  &kp KP_DIVIDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans        &kp END
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans           &trans         &trans            &trans             &trans        &trans
             >;
         };
 
