@@ -237,10 +237,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&trans    &trans         &trans        &trans         &trans               &trans                  &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans            &trans
-&trans    &hm_l LCTRL A  &hm_l LALT S  &hm_l LCTRL D  &hm_shift_l LSHFT F  &trans                  &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &hm_r RCTRL SEMI  &trans
-&kp LGUI  &trans         &trans        &trans         &trans               &trans  &trans  &trans  &trans  &trans             &trans             &trans            &trans            &trans
-&none     &none          &none         &trans         &trans               &trans                  &trans  &trans             &trans             &none             &none             &none
+&trans    &trans         &trans        &trans         &trans               &trans                          &trans  &trans             &mmv MOVE_Y(-300)  &trans            &trans            &trans
+&trans    &hm_l LCTRL A  &hm_l LALT S  &hm_l LCTRL D  &hm_shift_l LSHFT F  &trans                          &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(300)   &mmv MOVE_X(300)  &hm_r RCTRL SEMI  &trans
+&kp LGUI  &trans         &trans        &trans         &trans               &studio_unlock  &trans  &trans  &trans  &trans             &trans             &trans            &trans            &trans
+&none     &none          &none         &trans         &trans               &trans                          &trans  &trans             &trans             &none             &none             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
