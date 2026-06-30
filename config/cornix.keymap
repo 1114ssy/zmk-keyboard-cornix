@@ -140,7 +140,7 @@
             bindings = <&kp UP>, <&kp QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_RALT)>;
         };
 
         grave_esc: grave_esc {
@@ -157,6 +157,13 @@
             label = "LCMD_TD0";
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>;
+        };
+
+        rshift_td: rshift_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RSHIFT_TD";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&kp RA(RSHIFT)>;
         };
     };
 
