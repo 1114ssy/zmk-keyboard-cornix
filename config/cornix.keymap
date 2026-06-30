@@ -275,19 +275,19 @@
 
         layer_4 {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp INSERT
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &kp HOME
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans        &kp END
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6     &kp NUMBER_7   &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0  &kp INSERT
+&trans  &trans        &trans        &trans        &trans        &trans                        &kp KP_MINUS     &kp KP_PLUS    &kp KP_EQUAL      &kp SEMICOLON      &kp SQT       &kp HOME
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp KP_ASTERISK  &kp KP_DIVIDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans        &kp END
+&trans  &trans        &trans        &trans        &trans        &trans                        &trans           &trans         &trans            &trans             &trans        &trans
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
-&trans  &trans    &trans  &trans    &trans    &trans                     &trans     &trans    &trans    &trans    &trans    &trans
-&trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans    &trans    &trans    &trans
-&trans  &trans    &trans  &trans    &trans    &trans                     &trans     &trans    &trans    &trans    &trans    &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET       &kp AMPS  &kp STAR        &kp LPAR         &kp RPAR           &trans
+&trans  &trans    &trans  &trans    &trans    &trans                     &kp UNDERSCORE  &trans    &trans          &kp COLON        &kp DOUBLE_QUOTES  &trans
+&trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans  &trans          &trans    &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans             &trans
+&trans  &trans    &trans  &trans    &trans    &trans                     &trans          &trans    &trans          &trans           &trans             &trans
             >;
         };
 
